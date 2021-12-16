@@ -5,7 +5,7 @@ import userRouter from './routers/userRouter.js'
 import productRouter from './routers/productRouter.js'
 import dotenv from 'dotenv'
 import orderRouter from './routers/orderRouter.js'
-
+import * as path from 'path';
 
 dotenv.config();
 
@@ -35,7 +35,11 @@ app.get('/api/config/paypal', (req,res)=>{
 
 app.get('/',(req,res)=>res.status(200).send('pt here. It is Amazon clone project.'))
 
+app.use(express.static(path.join(__dirname, "/frontend/build")));
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/frontend/build', 'index.html'));
+});
 // Listening to  server
 
 app.listen(port,()=>console.log(`Listening on local host:${port}`))
