@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { savePaymentMethod } from '../actions/CartAction';
+import { savePaymentMethod } from '../actions/cartAction';
 import CheckoutSteps from '../components/CheckoutSteps'
 import "../styles/PaymentMethod.css"
 
