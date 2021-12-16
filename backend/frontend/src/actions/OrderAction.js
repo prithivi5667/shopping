@@ -1,6 +1,6 @@
 import { ORDER_CREATE_FAIL, ORDER_CREATE_REQUEST, ORDER_CREATE_SUCCESS, ORDER_DETAILS_FAIL, ORDER_DETAILS_REQUEST, ORDER_DETAILS_SUCCESS, ORDER_MINE_FAIL, ORDER_MINE_REQUEST, ORDER_MINE_SUCCESS, ORDER_PAY_FAIL, ORDER_PAY_REQUEST, ORDER_PAY_SUCCESS } from "../constants/OrderConstant"
 import axios from "../Axios"
-import { CART_EMPTY } from "../constants/CartConstant";
+import { CART_EMPTY } from "../constants/cartConstant";
 
 export const createdOrder = (order) => async (dispatch, getState) => {
     dispatch({
